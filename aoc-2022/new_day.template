@@ -1,0 +1,30 @@
+from abc import ABC
+from utils import Parser
+from utils.lib import answer, ftimer
+from utils.base_solution import BaseSolution
+
+
+# CODE HERE
+class Day${day}Solution(BaseSolution, ABC):
+    _input = "2022/day_${day}/day_${day}.input.txt"
+    _test_input = "2022/day_${day}/day_${day}_test.input.txt"
+
+    # def __init__(self, use_test_input):
+    #     super().method(use_test_input)
+
+    def parse_input(self):
+        self.food = Parser.split_by(self.read_input(), "\n", conv_func=None)  # lambda x:int(x)
+
+    @ftimer
+    def solve1(self):
+        pass
+    
+    @ftimer
+    def solve2(self):
+        pass
+
+
+if __name__ == '__main__':
+    s = Day${day}Solution(use_test_input=True)
+    answer(s.solve1())
+    answer(s.solve2())
